@@ -1,234 +1,211 @@
 <div align="center">
 
-# 🚀 AI-Based Congestion Control in SDN  
-### **A Hybrid LSTM + DQN Framework for Intelligent, Proactive Traffic Engineering**
+# 🛰️ **AI-Based Congestion Control in SDN**
+### 🚀 *Hybrid LSTM + DQN Framework for Intelligent, Proactive Traffic Engineering*
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://chat.qwen.ai/s/deploy/t_c71b65ef-a811-4795-97ee-73fd25bca398)
-![Python](https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge)
-![Ryu](https://img.shields.io/badge/SDN-Ryu%20Controller-red?style=for-the-badge)
-![Mininet](https://img.shields.io/badge/Mininet-Emulation-lightgrey?style=for-the-badge)
-![AI](https://img.shields.io/badge/AI-Deep%20Learning%20%2F%20Reinforcement%20Learning-green?style=for-the-badge)
+<img src="assets/banner.png" width="100%" alt="Project Banner">
 
 ---
 
-### ⚡ *Proactively predict congestion. Reroute traffic before it fails.  
-A fully-integrated research framework for AI-driven SDN control.*
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://chat.qwen.ai/s/deploy/t_c71b65ef-a811-4795-97ee-73fd25bca398)
+[![Video Demo](https://img.shields.io/badge/Video%20Demo-Watch%20Now-red?style=for-the-badge)](https://screenrec.com/share/tPUz4E7hH2)
+![Python](https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge)
+![Ryu](https://img.shields.io/badge/SDN-Ryu%20Controller-red?style=for-the-badge)
+![Mininet](https://img.shields.io/badge/Emulation-Mininet-lightgrey?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-LSTM%20%2F%20DQN-green?style=for-the-badge)
+
+---
+
+<img src="assets/logo.png" width="180px" alt="Project Logo">
+
+### *“Predict congestion before it happens. Reroute traffic before failures occur.”*
 
 </div>
 
 ---
 
+# 🎥 **Demo Previews**
+
+### 🔹 **GIF Preview (Working Application)**
+*(Upload GIF later)*  
+[ demo.gif ]
+
+yaml
+Copy code
+
+### 🔹 **Full Video Demonstration**
+🎬 https://screenrec.com/share/tPUz4E7hH2
+
+---
+
 # 📘 **Overview**
 
-This project implements a **complete SDN-based congestion control system** integrating:
+This is a **research-grade full-stack SDN-AI system** integrating:
 
-- **LSTM** for real-time congestion prediction  
-- **Deep Reinforcement Learning (DQN)** for intelligent routing  
-- **Ryu SDN Controller** for dynamic flow management  
-- **Mininet** for topology emulation  
-- **Flask Backend** for ML model serving  
-- **React Dashboard** for visualization  
+- 🔮 **LSTM for congestion prediction**
+- 🧠 **DQN for intelligent routing decisions**
+- 🔌 **Ryu SDN controller for OpenFlow rule installation**
+- 🧪 **Mininet topology emulation**
+- 🖥️ **React dashboard**
+- ⚙️ **Flask model server**
 
-Designed specifically for:
+This repository is perfect for:
 
-🎓 **Thesis Projects**  
-📚 **Research Papers**  
-🔬 **Network Experiments**  
-🧠 **AI-in-Networking Innovation**
-
----
-
-# 🏛️ **System Architecture**
-
-lua
-Copy code
-               +----------------------------+
-               |        Frontend (React)    |
-               |   Visual Analytics & UI    |
-               +-------------+--------------+
-                             |
-                             v
-+---------------------+ REST +----------------------+
-| Mininet Topology | <-------- | Backend (Flask API) |
-| Hosts, Switches | Stats | Model Inference |
-+----------+----------+ +----------+-----------+
-| |
-v v
-+----------+---------------------------------+-----------+
-| Ryu SDN Controller |
-| - Polls switch stats |
-| - Runs LSTM predictor |
-| - Runs DQN routing agent |
-| - Installs OpenFlow rules |
-+---------------------+-----------------------------------+
-|
-v
-Network Traffic Flow
-
-yaml
-Copy code
+✔ M.Tech/B.Tech Thesis  
+✔ IEEE/Elsevier Research Papers  
+✔ Industry SDN-AI Prototypes  
+✔ Academic Tutorials & Workshops  
 
 ---
 
-# 📂 **Repository Structure**
+# 🏗️ **Architecture (Mermaid Diagram)**
 
+```mermaid
+flowchart TD
+    A[Mininet Hosts & Switches] -->|Telemetry| B[Ryu SDN Controller]
+    B --> C[LSTM Predictor]
+    B --> D[DQN Routing Agent]
+    C --> E[Congestion Risk Score]
+    D --> F[Optimal Path Decision]
+    E --> B
+    F --> B
+    B -->|OpenFlow Rules| A
+📂 Repository Structure
+bash
+Copy code
 AI-SDN/
 │
-├── backend/ # Flask API for ML services
-├── ryu_app/ # Ryu SDN controller logic with AI integration
-├── mininet/ # Topology + traffic generation
-├── ai/ # Dataset, training scripts, LSTM/DQN models
-├── frontend/ # React visualization panel (optional)
+├── backend/        # Flask inference API
+├── ryu_app/        # Ryu controller logic + AI integration
+├── mininet/        # Topologies, iperf traffic, utilities
+├── ai/             # Dataset, training scripts, LSTM/DQN models
+├── frontend/       # React dashboard
 │
-├── .env.example # Backend config template
+├── assets/         # Banner, logo, GIFs, graphs
+├── .env.example    # Environment template
 └── README.md
+⚡ Features
+🔮 Predictive Congestion Control
+LSTM forecasts link congestion 3–5 seconds ahead.
 
-yaml
+🧠 Intelligent Routing with DQN
+Learns optimal routing with a custom reward function.
+
+⚙️ Real-Time SDN Integration
+Ryu installs OpenFlow rules instantly after decisions.
+
+🧪 Rich Emulation Environment
+Supports Fat-tree, Mesh, Linear, and Leaf-Spine networks.
+
+📊 Dashboard
+React UI shows congestion alerts, utilization, flows.
+
+🛠️ Setup Guide
+1️⃣ Install System Dependencies
+bash
 Copy code
-
----
-
-# ✨ **Key Features**
-
-### 🔮 **1. AI-Powered Congestion Prediction**
-- Multivariate LSTM model
-- Predicts queue buildup 3–5 seconds before congestion
-
-### 🧠 **2. Intelligent Routing via DQN**
-- Learns optimal paths
-- Minimizes latency and packet loss
-- Avoids congested links autonomously
-
-### 🔌 **3. Real SDN Integration**
-- Compatible with **OpenFlow 1.3**
-- Fully implemented in **Ryu**
-
-### 🧪 **4. Mininet-Based Emulation**
-- Supports Fat-Tree, Mesh, Leaf-Spine, and custom topologies
-
-### 📊 **5. Visualization Dashboard**
-- Displays real-time utilization  
-- Congestion alerts  
-- Flow decisions  
-
----
-
-# 🛠️ **Installation Guide (Ubuntu 20.04 Recommended)**
-
-> ✔ Python 3.8+  
-> ✔ Mininet  
-> ✔ Ryu  
-> ✔ Node.js (optional for frontend)
-
----
-
-## **1️⃣ Install System Dependencies**
-
-```bash
 sudo apt update
 sudo apt install python3-pip python3-venv git -y
-
-# Install Mininet & Ryu
 sudo apt-get install mininet -y
 pip3 install ryu
-2️⃣ Start Backend Server
+2️⃣ Backend Setup
 bash
 Copy code
 cd backend
 python3 -m venv venv
 source venv/bin/activate
-
 pip install -r requirements.txt
 cp .env.example .env
-
 python server.py
-3️⃣ Train the AI Model
+3️⃣ Train LSTM/DQN Models
 bash
 Copy code
 cd ai
 python3 train_model.py
-Output: model.pkl
+Produces:
 
-4️⃣ Start Ryu Controller
+Copy code
+model.pkl
+reward_curve.png
+accuracy_graph.png
+4️⃣ Run Ryu Controller
 bash
 Copy code
 ryu-manager ryu_app/controller_ai.py
-5️⃣ Run Mininet Topology
+5️⃣ Start Mininet
 bash
 Copy code
 sudo python3 mininet/topology.py
-This will:
-
-Create the topology
-
-Start traffic
-
-Trigger congestion
-
-Allow AI controller to react
-
-6️⃣ Launch React Dashboard (Optional)
+6️⃣ Launch React Dashboard
 bash
 Copy code
 cd frontend
 npm install
 npm start
-📡 Backend API Endpoints
-🔵 GET /stats
-Returns real-time SDN statistics.
+📡 Backend API Documentation
+Endpoint	Method	Description
+/predict	POST	Returns congestion probability
+/stats	GET	Provides real-time port statistics
+/route	POST	Computes optimal route via DQN
+/health	GET	Health status of backend service
 
-🔵 POST /predict
-Send telemetry → get LSTM congestion prediction.
+🧠 Dataset & Training
+Input Features
+Bandwidth usage
 
-🔵 POST /route
-Request route computed by DQN agent.
+Packet drop rate
 
-🧪 Sample Output Visuals (Placeholders)
-(Add your own screenshots here)
+Queue length
 
+RTT
+
+Inter-arrival times
+
+Training Details
+Model	Epochs	Optimizer	Loss
+LSTM	50	Adam	MSE
+DQN	5k Episodes	Q-Learning	TD Error
+
+📊 Performance Graphs (Placeholders)
 css
 Copy code
-[ Dashboard Screenshot Placeholder ]
-[ Traffic Graph Placeholder ]
-[ Routing Decision Logs ]
-📝 For Researchers
-This project is fully extendable for academic work:
-
-🧩 Possible Enhancements
-Replace RandomForest with full LSTM / GRU
-
-Swap DQN with Double-DQN, Dueling-DQN, PPO, or A3C
-
-Add deep attention models
-
-Integrate telemetry from sFlow / NetFlow
-
-📐 Experimental Ideas
-Compare multiple RL reward functions
-
-Test under adversarial microbursts
-
-Evaluate controller delay impact
-
-🎓 Citation (APA / IEEE Style)
-If you use this project in research:
-
-APA
-css
+[ accuracy_graph.png ]
+[ reward_curve.png ]
+[ latency_comparison.png ]
+🗺️ Project Roadmap
+csharp
 Copy code
-Maurya, A. K., Yadav, A., & Gupta, S. (2025). 
-AI-Based Congestion Control in SDN using LSTM and DQN.  
-Madan Mohan Malaviya University of Technology.
-IEEE
-css
-Copy code
-A. K. Maurya, A. Yadav, and S. Gupta, 
-"AI-Based Congestion Control in SDN using LSTM and DQN," 
-MMMUT, India, 2025.
-🤝 Contributing
-Pull requests and ideas are welcome!
-Please open an issue for feature suggestions.
+✔ LSTM congestion predictor
+✔ DQN intelligent routing agent
+✔ SDN integration with Ryu
+✔ Mininet support
+✔ React frontend
 
+⬜ Multi-agent RL support
+⬜ Transformer-based predictor
+⬜ sFlow/NetFlow integration
+⬜ Intent-Based Networking (IBN)
+⬜ GRPC-based fast telemetry plane
+👥 Contributors
+Name	Role
+Aditya Kumar Maurya	Lead Developer / Research
+Abhishek Yadav	SDN & Controller Logic
+Sujal Gupta	AI Training & Integration
+
+📄 License
+This project is licensed under the MIT License.
+Use freely for research and development.
+
+📝 Citation
+BibTeX
+bibtex
+Copy code
+@thesis{maurya2025sdnai,
+  title={AI-Based Congestion Control in SDN using LSTM and DQN},
+  author={Maurya, Aditya Kumar and Yadav, Abhishek and Gupta, Sujal},
+  school={MMMUT},
+  year={2025}
+}
 📧 Contact
-Aditya Kumar Maurya
+📨 Aditya Kumar Maurya
 📩 adityamaurya@mmmut.ac.in
