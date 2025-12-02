@@ -3,7 +3,7 @@
 # 🛰️ **AI-Based Congestion Control in SDN**
 ### 🚀 *Hybrid LSTM + DQN Framework for Intelligent, Proactive Traffic Engineering*
 
-<img src="assets/banner.png" width="100%" alt="Project Banner">
+<img src="banner.png" width="100%" alt="Project Banner">
 
 ---
 
